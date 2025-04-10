@@ -7945,5 +7945,14 @@
       <field type="uint8_t" name="is_valid" enum="MAV_RADAR_ODOM_TYPE_VALID">radar odom valid type</field>
       <field type="uint8_t" name="fusion_type">radar odom fusion type</field>
     </message>
+    <message id="16001" name="TARGET_EST_NED">
+      <description>target est result ned.</description>
+      <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude of the number.</field>
+      <field type="float[3]" name="pos_est" units="m">target position in ned frame</field>
+      <field type="float[3]" name="vel_est" units="m/s">target velocity in ned frame</field>
+      <field type="float[3]" name="acc_est" units="m/s/s">target acceleration in ned frame</field>
+      <field type="uint8_t" name="valid">target est ned valid</field>
+      <field type="uint8_t" name="cls">target type</field>
+    </message>
   </messages>
 </mavlink>
